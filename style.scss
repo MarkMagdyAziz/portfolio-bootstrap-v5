@@ -1,0 +1,259 @@
+$background-color:#f3f2f0;
+$title-shadow:-5px 0px 2px rgb(153 153 153 / 75%);
+$font:'Noto Serif', serif;
+$blue-color:#1769ff;
+$blue-color-opcaity:rgb(40 4 186 / 76%);
+
+/*-- Navbar  --*/
+
+.navbar,.portfolio{
+    background-color: $background-color;
+    
+}
+
+.navbar {
+  font-weight: 400;
+ .navbar-nav .nav-link:hover{
+    color: $blue-color;
+  }
+  .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border-color: $blue-color;
+}
+}
+
+
+.primary-font-spacing{
+font-family: $font;
+letter-spacing: 5px;
+}
+/*-- End Navbar  --*/
+
+
+/*-- Slider Header Section  --*/
+.bg-overlay {
+    background: url("imgs/Bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height:730px;
+}
+
+.bg-overlay-text{
+   width:45%
+}
+
+.hello-text{
+    font-family: $font;
+}
+
+@media (min-width:320px) and (max-width:768px) {
+.bg-overlay-text{
+   width:100%;
+   align-items:center;
+   
+}
+}
+/*-- End Slider Header Section  --*/
+
+/*-- Services Section  --*/
+.m-shadow{
+text-shadow: $title-shadow
+}
+
+
+.service-card {
+cursor: pointer;
+  transition: .6s;
+&:hover{
+ background-color:$blue-color-opcaity;
+  color:white
+}
+
+
+}
+
+.undlerine-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 43%;
+  width: 60px;
+  height: 2px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid $blue-color;
+}
+/*-- End Services Section  --*/
+
+
+
+/*-- End Portfolio Section  --*/
+.portfolio .box {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .box::before {
+  content: attr(data);
+  position: absolute;
+  background-color: $blue-color-opcaity;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 1s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+
+.portfolio .box:hover::before {
+  transform: translateX(0);
+}
+/*-- End Portfolio Section  --*/
+
+
+/*-- Testimonial Section  --*/
+#testimonial {
+
+    height: 450px;
+    padding: 30px 0px 20px;
+    color: #fff;
+    background-color: $blue-color-opcaity;
+.carousel-content {
+    padding: 20px 0px 20px 100px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.client-img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    margin: 0px auto;
+    border-radius: 100%;
+    position: absolute;
+    left: 0px;
+}
+.carousel-control-prev, .carousel-control-next {
+    font-size: 36px;
+}
+}
+#testimonial h2 {
+   font-family: $font;
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+}
+#testimonial h3 {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: right;
+}
+#testimonial p {
+    font-size: 15px;
+}
+#testimonial .client-img img {
+    width: 100%;
+}
+
+// Carousel Indicators
+.carousel-indicators {
+    bottom: 10px;
+    right: 0;
+    margin: 0;
+    
+}
+
+.carousel-indicators [data-bs-target ] {
+    height: 12px;
+    border: 1px solid black;
+    width: 12px;
+    background-color: inherit;
+    border-radius: 50%;
+}
+.carousel-indicators .active{
+   
+    border: 2px solid $blue-color;
+    background-color:$blue-color;
+}
+
+@media (max-width: 767px) {
+  #testimonial{
+    min-height: 400px;
+  }
+  .carousel-indicators{
+    display: none;
+  }
+#testimonial .carousel-content {
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+}
+#testimonial .client-img {
+    margin: 20px auto;
+    position: static;
+}
+#testimonial h3, #testimonial p {
+    text-align: center;
+}
+  
+}
+/*-- End Testimonial Section CSS --*/
+
+/*-- Start Footer Section  --*/
+.footer .codepen {
+  background-color: #0ebeff;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.footer .github {
+  background-color: #4078c0;
+   &:hover{
+    opacity: 0.6;
+  }
+}
+
+.footer .linkedin {
+  background-color: #0077b5;
+   &:hover{
+    opacity: 0.6;
+  }
+}
+
+.footer .youtube {
+  background-color: #ff0000;
+   &:hover{
+    opacity: 0.6;
+  }
+}
+
+.form-control{
+  &::placeholder{
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  &:focus{
+    border: 1px;
+    box-shadow: none;
+    color: #0ebeff;
+   
+  }
+
+}
+.footer .links a:hover{
+  color: $blue-color;
+}
+/*-- End Footer Section --*/
+
